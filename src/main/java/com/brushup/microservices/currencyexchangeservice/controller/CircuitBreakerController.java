@@ -15,7 +15,7 @@ public class CircuitBreakerController {
     private Logger logger = LoggerFactory.getLogger(CircuitBreakerController.class);
 
     @GetMapping("/sample-api")
-    @Retry(name = "default")
+    @Retry(name = "sample-api")
     public String sampleAPI() {
         logger.info("Sample API Call received");
         ResponseEntity<String> responseBody =  new RestTemplate().getForEntity("http://localhost:8080/dummy", String.class);
