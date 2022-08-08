@@ -22,7 +22,7 @@ public class CircuitBreakerController {
     @RateLimiter(name = "default")
     public String sampleAPI() {
         logger.info("Sample API Call received");
-        ResponseEntity<String> responseBody =  new RestTemplate().getForEntity("http://localhost:8080/dummy", String.class);
+        //ResponseEntity<String> responseBody =  new RestTemplate().getForEntity("http://localhost:8080/dummy", String.class);
         return "sample-response";
     }
 
